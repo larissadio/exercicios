@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Triângulo (Isóceles, Equilatero, Escaleno)</title>
+    <script lang="JavaScript">
+        
+        var l, d, h, resultado;
+
+        function isTriangle ()
+        {
+            l = parseInt(document.isItTriangle.n1.value);
+            d = parseInt(document.isItTriangle.n2.value);
+            h = parseInt(document.isItTriangle.n3.value);
+
+            if((l + d > h) || (d + h > l) || (h + l > d))
+            {
+                if((l == d) && (d == h))
+                {
+                    document.write("O triângulo apresentado é um triângulo equilátero! img scr'triangulos/equilatero.png'>");
+                }
+                else
+                {
+                    if((l == d) || (l == h) || (h == d))
+                    {
+                        document.write("O triângulo apresentado é um triângulo isósceles! <img scr'triangulos/isosceles.png'>");
+                    }
+                    else
+                    {
+                        document.write("O triângulo apresentado é um triângulo escaleno! <img scr'triangulos/escaleno.png'>");
+                    }
+                }
+            }
+            else
+            {
+                document.write("Os valores informados não formam um triângulo!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="isItTriangle">
+        Digite a medida do lado A do triângulo: <input type="text" name="n1" value="0" size="4"><br>
+        Digite a medida do lado B do triângulo: <input type="text" name="n2" value="0" size="4"><br>
+        Digite a medida do lado C do triângulo: <input type="text" name="n3" value="0" size="4"><br>
+        <input type="button" name="vai" value="Verificar" onclick="isTriangle()">
+    </form>
+
+    <p id="confimacao"></p>
+
+</body>
+</html>

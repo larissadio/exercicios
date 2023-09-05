@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabuada do valor informado</title>
+    <script lang="JavaScript">
+        function tabuada()
+        {
+            var i, a;
+            a = parseInt(document.frm.num1.value)
+            for (i = 1; i <= 10 ; i++)
+            {
+                document.write(a + " x " + i + " = " + (i*a) + "<br>");
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="frm">
+        Informe a tabuada que você deseja: <input type="number" name="num1" size="5" value="0"><br>
+        <input type="button" value="Tabuada" name="alvo" onclick="tabuada()">
+    </form>  
+</body>
+</html>
